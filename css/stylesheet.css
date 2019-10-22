@@ -1,9 +1,27 @@
-.icon-title {
- font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-    line-height: 1em;
-	text-align: center;
-	
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
+main {
+	flex: 1 0 auto;
+}
+
+.nav-wrapper {
+	background-color: gray;
+}
+
+.icon-title {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 1em;
+	text-align: center;
+}
+
+.footer-copyright {
+	background-color: black;
+	margin-top: 50px;
+	color: white;
+}
