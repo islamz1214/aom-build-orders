@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <!--Import Google Icon Font-->
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <!--Import materialize.css-->
+	  <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css"  media="screen,projection"/>
+	  <!--Custom CSS-->
+	  <link type="text/css" rel="stylesheet" href="/assets/css/stylesheet.css"/>
+	  <!--Let browser know website is optimized for mobile-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+	<body>
+	 
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo center">AOM Build Orders</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					{% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+					{% for p in navigation_pages %}
+						{% if p.navigation_weight %}
+							<li>
+								<a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+									&nbsp{{ p.title }}
+								</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+	</nav>
+	
+	<div id="content">
+		{{ content }}
+	</div>
+	
+	
+	<footer class="footer-copyright center-align">
+		<div class="container">
+			<p>© 2019</p>
+        </div>
+	</footer>
+
+	  <!--JavaScript at end of body for optimized loading-->
+	  <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
+	</body>
+
+</html>
